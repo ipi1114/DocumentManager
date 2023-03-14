@@ -1,0 +1,80 @@
+<div id="org-users-component" class="org-content-header">
+  <div class="caption">Users</div>
+  <div class="org-users-buttons">
+    <button type="button" class="btn btn-light">
+      <i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;Invite
+    </button>
+  </div>
+</div>
+<div class="org-content-body">
+  <div class="container">
+    <div class="row users-filter-section"></div>
+    <div class="row users-table-section">
+
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+          <td mat-cell *matCellDef="let element"> 
+            <div class="user-profile-name d-flex flex-row" style="padding: 10px">
+              <div style="width: 50px; height: 50px; border-radius: 50%;">
+                <img src="{{element.ProfileImageURL}}" style="width:100%">
+              </div>
+              <div class="d-flex flex-column justify-content-center" style="margin-left:10px">
+                <div style="font-weight:600">
+                  {{element.FirstName}} {{element.LastName}} 
+                </div>
+                <div style="color:gray">
+                  {{element.UserEmail}}
+                </div>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+        
+
+        <!-- name Roles -->
+        <ng-container matColumnDef="Roles">
+          <th mat-header-cell *matHeaderCellDef>Roles</th>
+          <td mat-cell *matCellDef="let element">
+            <div class="d-flex flex-row user-roles">
+              <div *ngFor="let role of element.Roles; let i = index">
+                <div class="role-chip" 
+                     *ngIf="i < 3" 
+                     [class]="getUserRoleChipClass(role.RoleName)">
+                  {{role.RoleName}}
+                </div>
+              </div> 
+              <div class="role-chip multiple-roles-chip" 
+                   *ngIf="element.Roles.length >= 3">
+                +{{element.Roles.length - 3}}
+              </div>
+            </div>
+            </td>
+        </ng-container>
+      
+        <!-- value Status -->
+        <ng-container matColumnDef="Status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            Status
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="d-flex flex-row user-status align-items-baseline" [class]="element.Status.toLowerCase()">
+              <div class="status-dot"></div>
+              <div class="status-text">
+                {{element.Status}}
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" style="height: 45px;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+      </table>
+
+    </div>
+  </div>
+</div>

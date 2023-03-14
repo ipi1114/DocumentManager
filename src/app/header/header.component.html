@@ -1,0 +1,32 @@
+<div class="head" [ngClass]="getHeaderClass()">
+  <div class="row head-content d-flex align-items-center">
+    <div class="col-3 head-content-left">
+      <span class="head-caption" [innerText]="activeComponentName"></span>
+    </div>
+    <div class="col-6 head-content-center">
+      <div class="search-container">
+        <div class="normal-search">
+          <input type="search" class="search" name="" id="" placeholder="Search">
+          <i class="fa fa-search search-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 head-content-right d-flex flex-row align-items-center justify-content-end">
+      <div class="head-menu-container d-flex flex-row">
+        <div class="head-menu-item">
+          <button type="button" class="btn btn-light head-menu-item-button">
+            <i class="fa fa-check"></i>
+          </button>
+        </div>
+        <div class="head-menu-item">
+          <button type="button" class="btn btn-light head-menu-item-button">
+            <i class="fa fa-bell"></i>
+          </button>
+        </div>
+      </div>
+      <div class="head-user-avatar">
+        <img src="../../assets/images/user_profile-men.png" alt="user" class="user-avatar">
+      </div>
+    </div>
+  </div>
+</div>

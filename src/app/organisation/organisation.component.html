@@ -1,0 +1,19 @@
+<div class="organisation">
+    <div class="org-menu">
+      <ul class="org-menu-nav">
+        <li class="org-menu-item" *ngFor="let menuItem of menuData">
+          <a class="org-menu-link"  [routerLink]="[menuItem.routerLink]" 
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}">
+            
+            <i class="org-menu-link-icon" [class]="menuItem.icon"></i>
+            <span class="org-menu-link-text">{{menuItem.label}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="org-content">
+      <router-outlet></router-outlet>
+    </div>
+</div>

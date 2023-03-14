@@ -1,0 +1,80 @@
+<div id="org-general-component" class="org-content-header">
+  <div class="caption">Organisation profile and settings</div>
+  <div class="org-general-buttons">
+    <button type="button" class="btn btn-light">Cancel</button>
+    <button type="button" class="btn btn-primary">Save</button>
+  </div>
+</div>
+<div class="org-content-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 container-left">
+
+        <div class="row org-name-section section">
+          <div class="section-caption">
+            Organisation name
+            <i class="fa-solid fa-circle-info info-icon" title="Info"></i>
+          </div>
+          <div class="col-8">
+            <input type="text" class="form-control" aria-label="Name">
+          </div>
+        </div>
+      
+        <div class="row org-logo-section section">
+          <div class="col-6">
+            <div class="section-caption">
+              Organisation logo
+              <i class="fa-solid fa-circle-info info-icon" title="Info"></i>
+            </div>
+            <button type="button" class="btn btn-primary">Change</button>
+          </div>
+          <div class="org-logo"></div>
+        </div>
+      
+        <div class="row org-timezone-section section">
+          <div class="section-caption">
+            Timezone settings
+            <i class="fa-solid fa-circle-info info-icon" title="Info"></i>
+          </div>
+          
+          <div class="col-6">
+            <select class="form-select">
+              <option [selected]="item == selectedTimezone ? true : false" *ngFor="let item of timezones">{{item}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row org-userprofile-section section">
+          <div class="section-caption">Profile photo
+            <i class="fa-solid fa-circle-info info-icon" title="Chose who will have rights to set user icon"></i>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" name="profile-photo" id="allow-user">
+            <label for="allow-user">Employee</label>
+          </div>  
+          
+          <div class="radio-option">
+            <input type="radio" name="profile-photo" id="allow-admin">
+            <label for="allow-admin">Administrator</label>
+          </div>
+        </div>
+
+        <div class="row org-inviteusers-section section">
+          <div class="section-caption">
+            Invite to the organisation
+            <i class="fa-solid fa-circle-info info-icon" title="Info"></i>
+          </div>
+
+            <div class="input-group">
+              <input type="text" class="form-control" aria-label="Name" 
+                      value="https://org.document-manager.com/join/AJOqlzVrdtqoLuH3M52Nv" readonly>
+              <i class="fa-solid fa-clone input-group-text"></i>
+            </div>
+        </div>
+
+      </div>
+      <div class="col-8 container-right"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+.org-content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  height: 60px;
+
+  .caption {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.org-content-body {
+  height: calc(100% - 75px);
+  overflow-y: scroll;
+}
+
+.role-chip {
+  border-radius:15px; 
+  padding: 2px 10px; 
+  margin: 0px 5px;
+  
+  background-color: #EDF0FF;
+  border: 1px solid #EDF0FF;
+  color:black
+}
+
+.role-chip-s1 
+{
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+} 
+.role-chip-s2 
+{
+  background-color: #FEF7DB;
+  border: 1px solid #FEF7DB;
+  color: black;
+} 
+.role-chip-s3 {
+  background-color: #DFF9E0;
+  border: 1px solid #DFF9E0;
+  color: black;
+} 
+.role-chip-s4 {
+  background-color: #E5F3FE;
+  border: 1px solid #E5F3FE;
+  color: black;
+}
+
+.multiple-roles-chip {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+
+///
+
+.user-status {
+  
+  .status-dot {
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .status-text {
+    margin-left: 5px;
+  }
+}
+
+.user-status.active {
+  
+  .status-dot{
+    background-color: #4DBE23;
+    border:1px solid #4DBE23;
+  }
+
+  .status-text {
+    color: #4DBE23;
+  }
+}
+
+.user-status.inactive {
+  
+  .status-dot{
+    background-color: #959DA1;
+    border:1px solid #959DA1;
+  }
+}
+
+.user-status.invited {
+  
+  .status-dot{
+    background-color: white;
+    border:1px solid #959DA1;
+  }
+
+  .status-text {
+    color: #959DA1;
+  }
+}

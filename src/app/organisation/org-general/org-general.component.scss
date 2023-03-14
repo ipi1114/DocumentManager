@@ -1,0 +1,101 @@
+.org-content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  height: 60px;
+
+  .caption {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.org-content-body {
+  height: calc(100% - 75px);
+  overflow-y: scroll;
+}
+
+// -----------
+
+.org-general-buttons button:first-child {
+  margin-right: 15px;
+}
+
+
+.container-left > :last-child {
+  border-bottom: none!important;
+  margin-bottom: 0px!important;
+  padding-bottom: 0px!important;
+}
+
+.container-right {
+  
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/images/organisation-ppl.png");
+}
+
+.section {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+
+  .section-caption{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    .info-icon {
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--gray-color-2);
+    }
+  }
+}
+
+.org-logo-section {
+
+  .org-logo-container {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .org-logo {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--border-color);
+
+    background-size: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/icons/organisation-logo.png");
+  }
+
+  .org-logo:hover {
+    border: 3px solid var(--border-color);
+  }
+}
+
+.org-userprofile-section {
+
+  .radio-option {
+    margin-bottom: 10px;
+
+    label {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}
+
+.org-inviteusers-section {
+  .input-group-text {
+    user-select: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,3 @@
+<app-sidenav (onToogleSideNav)="onToogleSideNav($event)"></app-sidenav>
+<app-header [activeComponentName]="activeComponent" [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-header>
+<app-body (onComponentChange)="onComponentChange($event)" [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth" ></app-body>
